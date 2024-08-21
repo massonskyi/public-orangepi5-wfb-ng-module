@@ -1,0 +1,14 @@
+[Unit]
+Description=tx-stream-video
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/sender/tx_stream_x264.sh
+Restart=always
+User=orangepi
+Group=orangepi
+Environment=PATH=/usr/local/bin/sender:/usr/bin:/usr/local/bin:/usr/sbin:/usr/local/sbin
+Environment=HOME=/home/orangepi
+
+[Install]
+WantedBy=multi-user.target

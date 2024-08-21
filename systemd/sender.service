@@ -1,0 +1,14 @@
+[Unit]
+Description=rx-sender (client-service)
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/sender/run-service-sender.sh
+Restart=always
+User=orangepi
+Group=orangepi
+Environment=PATH=/usr/local/bin/sender:/usr/bin:/usr/local/bin:/usr/sbin:/usr/local/sbin
+Environment=HOME=/home/orangepi
+
+[Install]
+WantedBy=multi-user.target

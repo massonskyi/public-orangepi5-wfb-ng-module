@@ -1,0 +1,14 @@
+[Unit]
+Description=tx-sender (Server-service)
+After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/receive/run-service-received.sh
+Restart=always
+User=orangepi
+Group=orangepi
+Environment=PATH=/usr/local/bin/receive:/usr/bin:/usr/local/bin:/usr/sbin:/usr/local/sbin
+Environment=HOME=/home/orangepi
+
+[Install]
+WantedBy=multi-user.target
