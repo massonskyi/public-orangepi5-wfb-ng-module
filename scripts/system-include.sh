@@ -42,7 +42,7 @@ chown orangepi:orangepi "$log_file_system_include"
 chmod 664 "$log_file_system_include"
 
 # Логирование
-logfile="/home/orangepi/repo/wfb-ng-module/system-include.log"
+logfile="${pwd}/../system-include.log"
 exec > >(tee -a "$logfile") 2>&1
 
 chown orangepi:orangepi "$log_file_sender"
@@ -59,8 +59,8 @@ sudo cp /etc/sudoers "$temp_file"
 
 # Добавляем строки в временный файл
 echo "orangepi ALL=(ALL) NOPASSWD: /usr/sbin/iwconfig, /usr/sbin/ifconfig, /usr/sbin/iw, /usr/sbin/airmon-ng, /bin/systemctl" >> "$temp_file"
-echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/wfb-ng-module/build/VideoTx" >> "$temp_file"
-echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/wfb-ng-module/build/VideoRx" >> "$temp_file"
+echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/public-orangepi5-wfb-ng-module/build/VideoTx" >> "$temp_file"
+echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/public-orangepi5-wfb-ng-module/build/VideoRx" >> "$temp_file"
 
 # Проверяем синтаксис временного файла
 sudo visudo -c -f "$temp_file"
@@ -90,6 +90,7 @@ if [ $param_r -eq 1 ]; then
 
   systemctl enable rx_stream.service
   systemctl start rx_stream.service
+
   cd "$current_dir"	
   mkdir -p /usr/local/bin/receive
   cp run-service-received.sh /usr/local/bin/receive

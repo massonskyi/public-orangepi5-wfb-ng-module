@@ -1,7 +1,7 @@
 #!/bin/bash
 sleep 10
 # Логирование
-logfile="/home/orangepi/repo/wfb-ng-module/sender.log"
+logfile="${pwd}/../sender.log"
 exec > >(tee -a "$logfile") 2>&1
 
 # Получаем название Wi-Fi адаптера
@@ -30,12 +30,6 @@ if ! sudo ifconfig $adapter up; then
   exit 1
 fi
 
-# Устанавливаем канал 140
-if ! sudo iw dev $adapter set channel 140; then
-  echo "Не удалось установить канал 140 для адаптера $adapter"
-  exit 1
-fi
-
 # Проверяем и убиваем процессы, которые могут мешать
 if ! sudo airmon-ng check kill; then
   echo "Не удалось убить процессы, которые могут мешать"
@@ -48,13 +42,13 @@ if ! sudo airmon-ng start $adapter; then
   exit 1
 fi
 
-# Устанавливаем канал 140
+# Устанавливаем канал 36
 if ! sudo iw dev $adapter set channel 36; then
-  echo "Не удалось установить канал 140 для адаптера $adapter"
+  echo "Не удалось установить канал 36 для адаптера $adapter"
   exit 1
 fi
 # Переходим в директорию с исполняемым файлом
-cd /home/orangepi/repo/wfb-ng-module/build/ || { echo "Не удалось перейти в директорию ../build/"; exit 1; }
+cd $pwd/../build || { echo "Не удалось перейти в директорию $pwd/../build"; exit 1; }
 
 # Запускаем receiver
 if ! sudo ./VideoTx $adapter; then

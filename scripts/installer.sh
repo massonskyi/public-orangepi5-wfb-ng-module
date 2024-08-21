@@ -44,6 +44,11 @@ if ! mkdir -p "$build_dir"; then
     log_error "Не удалось создать директорию build."
 fi
 
+echo "Создание ключей..."
+cp rx.key "$build_dir"
+
+cp tx.key "$build_dir"
+
 # Переход в директорию build
 echo "Переход в директорию build..."
 if ! cd "$build_dir"; then
@@ -61,10 +66,6 @@ if ! make; then
     log_error "Не удалось запустить make."
 fi
 
-echo "Создание ключей..."
-cp rx.key "$build_dir"
-
-cp tx.key "$build_dir"
 
 # Переход в директорию driver
 echo "Переход в директорию driver..."
@@ -72,11 +73,11 @@ if ! cd "$driver_dir"; then
     log_error "Не удалось перейти в директорию driver."
 fi
 
-# Запуск скрипта dkms-install.sh
-echo "Установка драйвера для адаптера"
-if ! ./dkms-install.sh; then
-    log_error "Не удалось запустить скрипт dkms-install.sh."
-fi
+# Запуск скрипта dkms-install.sh TODO: Реализовать выбор устанавливаемого драйвера
+#echo "Установка драйвера для адаптера"
+#if ! /driver/8812au/./dkms-install.sh; then
+#    log_error "Не удалось запустить скрипт dkms-install.sh."
+#fi
 
 echo "Установка завершена успешно."
-echo "Далее запустите скрипт 'system-include.sh' для добавление программы в систему
+echo "Далее запустите скрипт 'system-include.sh' для добавление программы в систему"
