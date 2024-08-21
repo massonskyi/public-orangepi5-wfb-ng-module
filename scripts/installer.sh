@@ -34,7 +34,7 @@ if ! apt update && apt upgrade -y; then
 fi
 
 echo "Установка необходимых пакетов..."
-if ! apt install -y libsodium-dev libpcap-dev dkms; then
+if ! apt install -y libsodium-dev libpcap-dev dkms cmake aircrack-ng; then
     log_error "Не удалось установить необходимые пакеты."
 fi
 
