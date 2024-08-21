@@ -49,7 +49,7 @@ if ! sudo iw dev $adapter set channel 36; then
 fi
 
 # Переходим в директорию с исполняемым файлом
-cd $pwd/../build || { echo "Не удалось перейти в директорию $pwd/../build"; exit 1; }
+cd /home/orangepi/repo/public-orangepi5-wfb-ng-module/build || { echo "Не удалось перейти в директорию $pwd/../build"; exit 1; }
 
 # Запускаем receiver
 if ! sudo ./VideoRx $adapter; then
