@@ -59,8 +59,8 @@ sudo cp /etc/sudoers "$temp_file"
 
 # Добавляем строки в временный файл
 echo "orangepi ALL=(ALL) NOPASSWD: /usr/sbin/iwconfig, /usr/sbin/ifconfig, /usr/sbin/iw, /usr/sbin/airmon-ng, /bin/systemctl" >> "$temp_file"
-echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/public-orangepi5-wfb-ng-module/build/VideoTx" >> "$temp_file"
-echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/public-orangepi5-wfb-ng-module/build/VideoRx" >> "$temp_file"
+echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/repo/public-orangepi5-wfb-ng-module/build/VideoTx" >> "$temp_file"
+echo "orangepi ALL=(ALL) NOPASSWD: /home/orangepi/repo/public-orangepi5-wfb-ng-module/build/VideoRx" >> "$temp_file"
 
 # Проверяем синтаксис временного файла
 sudo visudo -c -f "$temp_file"
@@ -79,17 +79,15 @@ rm "$temp_file"
 
 cd "$systemd_dir"
 
-cp ./* /etc/systemd/system/
-
+cp ./receiver.service /etc/systemd/system/
+cp ./sender.service /etc/systemd/system/
+cp ./tx_stream.service /etc/systemd/system
 systemctl daemon-reload
 
 if [ $param_r -eq 1 ]; then
   echo "Parameter -r is set"
   systemctl enable receiver.service
   systemctl start receiver.service
-
-  systemctl enable rx_stream.service
-  systemctl start rx_stream.service
 
   cd "$current_dir"	
   mkdir -p /usr/local/bin/receive
@@ -103,8 +101,6 @@ if [ $param_s -eq 1 ]; then
   systemctl enable sender.service
   systemctl start sender.service
 
-  systemctl enable tx_stream.service
-  systemctl start tx_stream.service
   cd "$current_dir"	
   mkdir -p /usr/local/bin/sender
   cp run-service-sender.sh /usr/local/bin/sender

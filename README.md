@@ -11,6 +11,7 @@
 
 **System-include** встраивает выбранное приложение(Передатчик (**sender**) или приемник(**receive**))
 
+## 3. Add the rx_stream.sh in autorun in your system receive
 
 
 # Run
