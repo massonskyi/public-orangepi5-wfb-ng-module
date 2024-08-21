@@ -48,6 +48,11 @@ if ! sudo airmon-ng start $adapter; then
   exit 1
 fi
 
+# Устанавливаем канал 140
+if ! sudo iw dev $adapter set channel 36; then
+  echo "Не удалось установить канал 140 для адаптера $adapter"
+  exit 1
+fi
 # Переходим в директорию с исполняемым файлом
 cd /home/orangepi/repo/wfb-ng-module/build/ || { echo "Не удалось перейти в директорию ../build/"; exit 1; }
 
