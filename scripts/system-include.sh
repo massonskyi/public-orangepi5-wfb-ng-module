@@ -100,7 +100,9 @@ if [ $param_s -eq 1 ]; then
 
   systemctl enable sender.service
   systemctl start sender.service
-
+  
+  systemctl enable tx_stream_x264.service
+  systemctl start tx_stream_x264.service
   cd "$current_dir"	
   mkdir -p /usr/local/bin/sender
   cp run-service-sender.sh /usr/local/bin/sender
