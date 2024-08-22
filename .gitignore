@@ -2,3 +2,7 @@
 *.log
 
 build/
+
+.venv
+*.venv
+.venv/
