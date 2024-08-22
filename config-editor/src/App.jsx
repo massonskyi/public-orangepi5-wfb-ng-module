@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import AddressInput from './components/AddressInput';
 import RecentAddresses from './components/RecentAddresses';
 import ConfigEditor from './components/ConfigEditor';
+import "./styles/App.css"
 
 function App() {
     const [currentAddress, setCurrentAddress] = useState('');
@@ -12,17 +13,6 @@ function App() {
         const addresses = JSON.parse(localStorage.getItem('recentAddresses')) || [];
         setRecentAddresses(addresses);
     }, []);
-
-    const saveAddress = async (address) => {
-        setCurrentAddress(address);
-        if (!recentAddresses.includes(address)) {
-            const updatedAddresses = [...recentAddresses, address];
-            setRecentAddresses(updatedAddresses);
-            localStorage.setItem('recentAddresses', JSON.stringify(updatedAddresses));
-        }
-        const fetchedConfig = await fetchConfig(address);
-        setConfig(fetchedConfig);
-    };
 
     const fetchConfig = async (address) => {
         try {
@@ -37,9 +27,20 @@ function App() {
         }
     };
 
+    const saveAddress = async (address) => {
+        setCurrentAddress(address);
+        if (!recentAddresses.includes(address)) {
+            const updatedAddresses = [...recentAddresses, address];
+            setRecentAddresses(updatedAddresses);
+            localStorage.setItem('recentAddresses', JSON.stringify(updatedAddresses));
+        }
+        const fetchedConfig = await fetchConfig(address);
+        setConfig(fetchedConfig);
+    };
+
     return (
         <div className="container mx-auto p-8">
-            <h1 className="text-4xl font-bold text-center mb-8">Config Editor</h1>
+            <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">Config Editor</h1>
             <AddressInput saveAddress={saveAddress} />
             <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} />
             {config && <ConfigEditor config={config} currentAddress={currentAddress} />}

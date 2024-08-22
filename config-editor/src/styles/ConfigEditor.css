@@ -1,0 +1,64 @@
+/* ConfigEditor.css */
+.config-editor {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.config-editor h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #1a73e8;
+}
+
+.config-section h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+    color: #1a73e8;
+}
+
+.config-section table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.config-section table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+.config-section table input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.config-section table input:focus {
+    border-color: #1a73e8;
+    outline: none;
+}
+
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.fade-exit {
+    opacity: 1;
+}
+
+.fade-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}

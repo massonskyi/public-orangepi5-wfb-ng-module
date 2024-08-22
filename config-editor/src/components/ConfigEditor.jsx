@@ -1,6 +1,6 @@
 import React from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import './ConfigEditor.css'; // Ensure the path is correct
+import '../styles//ConfigEditor.css'; // Ensure the path is correct
 
 function ConfigEditor({ config, currentAddress }) {
     const handleChange = async (section, key, value) => {
@@ -21,8 +21,8 @@ function ConfigEditor({ config, currentAddress }) {
     };
 
     return (
-        <div className="config-editor bg-white shadow-lg p-6 rounded-lg">
-            <h2 className="text-2xl font-semibold text-center mb-4">Configuration</h2>
+        <div className="config-editor">
+            <h2>Configuration</h2>
             <TransitionGroup>
                 {Object.keys(config).map(section => (
                     <CSSTransition
@@ -30,9 +30,9 @@ function ConfigEditor({ config, currentAddress }) {
                         timeout={300}
                         classNames="fade"
                     >
-                        <div className="config-section mb-6">
-                            <h3 className="text-xl font-semibold mb-4">{section}</h3>
-                            <table className="w-full border-collapse">
+                        <div className="config-section">
+                            <h3>{section}</h3>
+                            <table>
                                 <tbody>
                                     {Object.entries(config[section]).map(([key, value]) => (
                                         <CSSTransition
@@ -41,13 +41,12 @@ function ConfigEditor({ config, currentAddress }) {
                                             classNames="fade"
                                         >
                                             <tr>
-                                                <td className="border p-2">{key}</td>
-                                                <td className="border p-2">
+                                                <td>{key}</td>
+                                                <td>
                                                     <input
                                                         type="text"
                                                         defaultValue={value}
                                                         onBlur={(e) => handleChange(section, key, e.target.value)}
-                                                        className="w-full p-2 border rounded-lg"
                                                     />
                                                 </td>
                                             </tr>
