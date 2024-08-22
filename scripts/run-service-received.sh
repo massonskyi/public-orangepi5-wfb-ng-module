@@ -1,18 +1,35 @@
 #!/bin/bash
 sleep 10
+
+read_config() {
+    local config_file=$1
+    local section=$2
+    local key=$3
+    local value=$(grep -E "^\s*$key\s*=" "$config_file" | awk -F '=' '{print $2}' | tr -d ' ')
+    echo "$value"
+}
+
 # Логирование
 logfile=logfile="${pwd}/../received.log"
 exec > >(tee -a "$logfile") 2>&1
 
-# Получаем название Wi-Fi адаптера
-adapter=$(sudo iwconfig 2>/dev/null | grep -oP '^\w+')
+# Функция для логирования ошибок
+log_error() {
+    local message="$1"
+    echo "ERROR: $message"
+    exit 1
+}
 
-if [ -z "$adapter" ]; then
-  echo "Wi-Fi адаптер не найден"
-  exit 1
+config_file="sysconfwfb.conf"
+config_path="$HOME/.config/$config_file"
+
+# Проверка, существует ли файл
+if [ ! -f "$config_path" ]; then
+  log_error "Файл $config_path не найден. Возможно, вы не выполнили установку"
+  exit -1
 fi
 
-echo "Найден Wi-Fi адаптер: $adapter"
+adapter=$(read_config "$config_path" "WIFI" "wifi_channel")
 
 # Устанавливаем адаптер в режим монитора
 if ! sudo ifconfig $adapter down; then
@@ -49,7 +66,7 @@ if ! sudo iw dev $adapter set channel 36; then
 fi
 
 # Переходим в директорию с исполняемым файлом
-cd /home/orangepi/repo/public-orangepi5-wfb-ng-module/build || { echo "Не удалось перейти в директорию $pwd/../build"; exit 1; }
+cd /home/orangepi/repo/public-orangepi5-wfb-ng-module/build || { echo "Не удалось перейти в директорию /home/orangepi/repo/public-orangepi5-wfb-ng-module/build"; exit 1; }
 
 # Запускаем receiver
 if ! sudo ./VideoRx $adapter; then
