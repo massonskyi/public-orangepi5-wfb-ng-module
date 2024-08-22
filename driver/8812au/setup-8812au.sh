@@ -1,7 +1,5 @@
 #!/bin/bash
 
-
-
 if [[ $EUID -ne 0 ]]; then
   echo "You must run this with superuser priviliges.  Try \"sudo ./setup_88x2bu-20210702.sh\"" 2>&1
   exit 1

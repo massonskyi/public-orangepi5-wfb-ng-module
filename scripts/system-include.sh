@@ -93,6 +93,7 @@ if [ $param_r -eq 1 ]; then
   mkdir -p /usr/local/bin/receive
   cp run-service-received.sh /usr/local/bin/receive
   cp rx_stream_x264.sh /usr/local/bin/receive
+  cp /subs/* /usr/local/bin/receive
 fi
 
 if [ $param_s -eq 1 ]; then
@@ -107,6 +108,9 @@ if [ $param_s -eq 1 ]; then
   mkdir -p /usr/local/bin/sender
   cp run-service-sender.sh /usr/local/bin/sender
   cp tx_stream_x264.sh /usr/local/bin/sender
+  cp /subs/* /usr/local/bin/receive
+
+  
 fi
 
 echo "Встройка в систему завершена"
