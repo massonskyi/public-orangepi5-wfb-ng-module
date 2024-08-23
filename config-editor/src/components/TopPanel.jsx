@@ -1,13 +1,12 @@
 import React from 'react';
 import '../styles/TopPanel.css'; // Ensure the path is correct
 
-function TopPanel() {
+function TopPanel({currentAddress}) {
     const rebootSystem = async () => {
         try {
             const response = await fetch(`http://${currentAddress}/api/sys/api/reboot_system`);
             if (response.ok) {
-                const data = await response.json();
-                setFavorites(data);
+                alert(response.data)
             } else {
                 console.error('Failed to load favorites.');
             }

@@ -54,7 +54,7 @@ function App() {
 
     return (
         <div className="container">
-            <TopPanel /> {/* Include the TopPanel component */}
+            <TopPanel currentAddress={currentAddress}/> {/* Include the TopPanel component */}
             <BurgerMenu />
             <h1>Config Editor</h1>
             <AddressInput saveAddress={saveAddress} />
