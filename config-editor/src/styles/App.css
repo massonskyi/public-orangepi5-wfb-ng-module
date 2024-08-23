@@ -1,113 +1,67 @@
-/* App.css */
-body {
-  font-family: 'Arial', sans-serif;
-  background-color: #f0f2f5;
-  color: #333;
-}
-
 .container {
-  max-width: 1200px;
-  margin: 0 auto;
   padding: 20px;
 }
-
 h1 {
+  margin-top: 5rem;
   font-size: 2.5rem;
   font-weight: bold;
   text-align: center;
   margin-bottom: 2rem;
   color: #1a73e8;
 }
-
-.address-section, .config-editor {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  margin-bottom: 20px;
-}
-
-.address-section h2, .config-editor h2 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #1a73e8;
-}
-
-.address-section input, .config-editor input {
-  width: 100%;
+.top-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: flex-end;
   padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-bottom: 1rem;
-  transition: border-color 0.3s;
+  z-index: 1000;
+  border-bottom: 1px solid #ddd;
 }
 
-.address-section input:focus, .config-editor input:focus {
-  border-color: #1a73e8;
-  outline: none;
-}
-
-.address-section button, .config-editor button {
-  width: 100%;
-  padding: 10px;
-  background-color: #1a73e8;
-  color: #fff;
+.top-panel__button {
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.address-section button:hover, .config-editor button:hover {
-  background-color: #135ba1;
+.top-panel__button:hover {
+  background-color: #0056b3;
 }
 
-.config-section h3 {
-  font-size: 1.25rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-  color: #1a73e8;
+.dropdown {
+  position: relative;
+  display: inline-block;
 }
 
-.config-section table {
-  width: 100%;
-  border-collapse: collapse;
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
 }
 
-.config-section table td {
-  border: 1px solid #ccc;
-  padding: 10px;
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.config-section table input {
-  width: 100%;
-  padding: 5px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  transition: border-color 0.3s;
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
 }
 
-.config-section table input:focus {
-  border-color: #1a73e8;
-  outline: none;
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
-.fade-enter {
-  opacity: 0;
-}
-
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms;
-}
-
-.fade-exit {
-  opacity: 1;
-}
-
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 300ms;
-}

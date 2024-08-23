@@ -3,7 +3,7 @@ import AddressInput from './components/AddressInput';
 import RecentAddresses from './components/RecentAddresses';
 import ConfigEditor from './components/ConfigEditor';
 import BurgerMenu from './components/BurgerMenu';
-import SSHTerminal from './components/SSHTerminal'; // Import the SSH terminal
+import TopPanel from './components/TopPanel';
 import './styles/App.css'; // Ensure the path is correct
 
 function App() {
@@ -39,15 +39,35 @@ function App() {
         const fetchedConfig = await fetchConfig(address);
         setConfig(fetchedConfig);
     };
+    const removeAddress = (address) => {
+        setRecentAddresses(prev => {
+            const updatedAddresses = prev.filter(addr => addr !== address);
+            localStorage.setItem('recentAddresses', JSON.stringify(updatedAddresses));
+            return updatedAddresses;
+        });
+        if (currentAddress === address) {
+            setCurrentAddress('');
+            setConfig(null);
+        }
+    };
 
     return (
         <div className="container">
+            <TopPanel /> {/* Include the TopPanel component */}
             <BurgerMenu />
             <h1>Config Editor</h1>
             <AddressInput saveAddress={saveAddress} />
             <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} />
-            {config && <ConfigEditor config={config} currentAddress={currentAddress} />}
-            <SSHTerminal currentAddress={currentAddress} /> {/* Pass the currentAddress prop */}
+<div className="config-editors">
+                {recentAddresses.map(address => (
+                    <ConfigEditor
+                        key={address}
+                        config={address === currentAddress ? config : null}
+                        currentAddress={address}
+                        removeAddress={removeAddress}
+                    />
+                ))}
+            </div>
         </div>
     );
 }
