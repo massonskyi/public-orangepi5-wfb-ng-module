@@ -1,7 +1,15 @@
 from pydantic import BaseModel
 
-# Модель данных для обновления конфигурации
+from typing import Any, Dict, List
+
 class ConfigUpdate(BaseModel):
+    config: Dict[str, Dict[str, Any]]
+
+class ConfigDelete(BaseModel):
     section: str
     key: str
-    value: str
+    
+    
+
+class FavoritesRequest(BaseModel):
+    favorites: List[str]

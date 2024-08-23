@@ -1,16 +1,16 @@
 import json
 from fastapi import FastAPI
-from routes import router as API_CRUD
+from routers.api_crud import endpoint as API_CRUD
 from starlette.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
-import asyncio
-import paramiko
+import os
 
 app = FastAPI(
     title="Configurator"
 )
+
 origins = [
     "http://localhost",
     "http://localhost:8080",
@@ -30,35 +30,34 @@ app.include_router(
     API_CRUD, prefix="/api"
 )
 
+# Define the path to the JSON file
+FAVORITES_FILE = "favorites.json"
 
-@app.websocket("/ws/ssh")
-async def websocket_endpoint(websocket: WebSocket):
-    await websocket.accept()
-    try:
-        while True:
-            data = await websocket.receive_text()
+# Helper function to load favorites from JSON file
+def load_favorites():
+    if os.path.exists(FAVORITES_FILE):
+        with open(FAVORITES_FILE, "r") as f:
             try:
-                data_dict = json.loads(data)
-                address = data_dict.get('address')
-                command = data_dict.get('command')
-
-                if not address or not command:
-                    await websocket.send_text('Invalid data format')
-                    continue
-                print(address)
-                # Handle SSH connection and commands here
-                ssh = paramiko.SSHClient()
-                ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
-                ssh.connect(address, username='your_username', password='your_password')
-
-                stdin, stdout, stderr = ssh.exec_command(command)
-                result = stdout.read().decode()
-                await websocket.send_text(result)
+                return json.load(f)
             except json.JSONDecodeError:
-                await websocket.send_text('Invalid data format')
-    except WebSocketDisconnect:
-        pass
-    
+                return []
+    return []
+
+# Helper function to save favorites to JSON file
+def save_favorites(favorites):
+    with open(FAVORITES_FILE, "w") as f:
+        json.dump(favorites, f, indent=4)
+from models import FavoritesRequest
+
+
+@app.get("/api/favorites")
+async def get_favorites():
+    return load_favorites()
+
+@app.post("/api/favorites")
+async def save_favorites_endpoint(favorites_request: FavoritesRequest):
+    save_favorites(favorites_request.favorites)
+    return {"message": "Favorites saved successfully"}
 
 if __name__ == '__main__':
     import os 

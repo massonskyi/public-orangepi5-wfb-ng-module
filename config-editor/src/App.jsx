@@ -57,7 +57,7 @@ function App() {
             <BurgerMenu />
             <h1>Config Editor</h1>
             <AddressInput saveAddress={saveAddress} />
-            <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} />
+            <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} currentAddress={currentAddress}/>
 <div className="config-editors">
                 {recentAddresses.map(address => (
                     <ConfigEditor

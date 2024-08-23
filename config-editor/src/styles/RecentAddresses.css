@@ -42,3 +42,15 @@
     background-color: #004494;
     transform: translateY(0);
 }
+.recent-addresses__favorite-button {
+    margin-left: 10px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+}
+
+.recent-addresses__item {
+    display: flex;
+    align-items: center;
+}
