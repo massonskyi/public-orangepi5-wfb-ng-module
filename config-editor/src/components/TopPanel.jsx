@@ -10,7 +10,7 @@ function TopPanel({currentAddress}) {
             },
         });
 
-        if (!response.ok) throw new Error('Failed to reboot:', error);
+        if (!response.ok) throw new Error('Failed to reboot:');
         alert(response.json())
 
     };
