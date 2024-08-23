@@ -1,11 +1,11 @@
-import json
+
 from fastapi import FastAPI
 from routers.api_crud import endpoint as API_CRUD
+from routers.api_system import endpoint as API_SYS
 from starlette.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.responses import HTMLResponse
 from fastapi.middleware.cors import CORSMiddleware
-import os
 
 app = FastAPI(
     title="Configurator"
@@ -29,35 +29,9 @@ app.add_middleware(
 app.include_router(
     API_CRUD, prefix="/api"
 )
-
-# Define the path to the JSON file
-FAVORITES_FILE = "favorites.json"
-
-# Helper function to load favorites from JSON file
-def load_favorites():
-    if os.path.exists(FAVORITES_FILE):
-        with open(FAVORITES_FILE, "r") as f:
-            try:
-                return json.load(f)
-            except json.JSONDecodeError:
-                return []
-    return []
-
-# Helper function to save favorites to JSON file
-def save_favorites(favorites):
-    with open(FAVORITES_FILE, "w") as f:
-        json.dump(favorites, f, indent=4)
-from models import FavoritesRequest
-
-
-@app.get("/api/favorites")
-async def get_favorites():
-    return load_favorites()
-
-@app.post("/api/favorites")
-async def save_favorites_endpoint(favorites_request: FavoritesRequest):
-    save_favorites(favorites_request.favorites)
-    return {"message": "Favorites saved successfully"}
+app.include_router(
+    API_SYS, prefix="/api"
+)
 
 if __name__ == '__main__':
     import os 

@@ -37,11 +37,18 @@ if ! apt update && apt upgrade -y; then
 fi
 
 echo "Установка необходимых пакетов..."
-if ! apt install -y libsodium-dev libpcap-dev dkms cmake aircrack-ng; then
+if ! apt install -y libsodium-dev libpcap-dev dkms cmake aircrack-ng curl; then
     log_error "Не удалось установить необходимые пакеты."
     exit -1
 fi
-
+# installs nvm (Node Version Manager)
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.0/install.sh | bash
+# download and install Node.js (you may need to restart the terminal)
+nvm install 20
+# verifies the right Node.js version is in the environment
+node -v # should print `v20.17.0`
+# verifies the right npm version is in the environment
+npm -v # should print `10.8.2`
 # Создание директории build
 echo "Создание директории build..."
 if ! mkdir -p "$build_dir"; then

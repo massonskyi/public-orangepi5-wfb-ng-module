@@ -14,3 +14,10 @@ if os.path.exists(DEFAULT_CONFIG_PATH):
     print("Конфигурационный файл существует.")
 else:
     print("Конфигурационный файл не существует. Запустите ~/scripts/installer.sh для его создания.")
+
+
+# Define the path to the JSON file
+FAVORITES_FILE = "favorites.json"
+
+# Укажите путь к лог-файлам
+LOG_FILE_PATH = "/home/massonskyi/repo/public-orangepi5-wfb-ng-module/orangepi5-wfb-ng-module/log/"

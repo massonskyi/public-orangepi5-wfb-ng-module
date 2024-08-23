@@ -4,6 +4,7 @@ import RecentAddresses from './components/RecentAddresses';
 import ConfigEditor from './components/ConfigEditor';
 import BurgerMenu from './components/BurgerMenu';
 import TopPanel from './components/TopPanel';
+import LogsViewer from './components/LogsViewer';
 import './styles/App.css'; // Ensure the path is correct
 
 function App() {
@@ -58,7 +59,7 @@ function App() {
             <h1>Config Editor</h1>
             <AddressInput saveAddress={saveAddress} />
             <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} currentAddress={currentAddress}/>
-<div className="config-editors">
+            <div className="config-editors">
                 {recentAddresses.map(address => (
                     <ConfigEditor
                         key={address}
@@ -67,6 +68,9 @@ function App() {
                         removeAddress={removeAddress}
                     />
                 ))}
+            </div>
+            <div className="config-logs">
+                <LogsViewer currentAddress={currentAddress}></LogsViewer>
             </div>
         </div>
     );

@@ -94,6 +94,7 @@ if [ $param_r -eq 1 ]; then
   cp run-service-received.sh /usr/local/bin/receive
   cp rx_stream_x264.sh /usr/local/bin/receive
   cp /subs/* /usr/local/bin/receive
+
 fi
 
 if [ $param_s -eq 1 ]; then
@@ -108,9 +109,19 @@ if [ $param_s -eq 1 ]; then
   mkdir -p /usr/local/bin/sender
   cp run-service-sender.sh /usr/local/bin/sender
   cp tx_stream_x264.sh /usr/local/bin/sender
-  cp /subs/* /usr/local/bin/receive
+  cp /subs/* /usr/local/bin/sender
 
-  
 fi
-
+  cd "$current_dir/../"
+  mkdir -p /usr/local/bin/servers
+  cp configurator /usr/local/bin/servers
+  cp config-editor /usr/local/bin/servers
+  cd /usr/local/bin/servers/configurator
+  apt-get install python3-venv
+  python3 -m venv .venv
+  source .venv/bin/activate
+  pip install -r requirements.txt
+  deactivate
+  cd ../config-editor
+  npm install
 echo "Встройка в систему завершена"
