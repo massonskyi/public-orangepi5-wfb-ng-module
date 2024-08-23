@@ -1,20 +1,42 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { CSSTransition, TransitionGroup } from 'react-transition-group';
-import '../styles//ConfigEditor.css'; // Ensure the path is correct
+import '../styles/ConfigEditor.css';
 
-function ConfigEditor({ config, currentAddress }) {
-    const handleChange = async (section, key, value) => {
+function ConfigEditor({ config, currentAddress, refreshConfig }) {
+    const [localConfig, setLocalConfig] = useState(config);
+
+    // Обновляем локальную копию конфигурации, когда config меняется
+    useEffect(() => {
+        setLocalConfig(config);
+    }, [config]);
+
+    const handleChange = (section, key, value) => {
+        // Обновляем локальную копию конфигурации в состоянии
+        setLocalConfig(prevConfig => ({
+            ...prevConfig,
+            [section]: {
+                ...prevConfig[section],
+                [key]: value,
+            }
+        }));
+    };
+
+    const handleSave = async () => {
         try {
             const response = await fetch(`http://${currentAddress}/api/crud/config`, {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ section, key, value })
+                body: JSON.stringify(localConfig),
             });
+
             if (!response.ok) throw new Error("Failed to update config.");
             const result = await response.json();
             alert(result.message);
+
+            // Обновляем конфигурацию на сервере и в приложении
+            refreshConfig();  // Вызываем refreshConfig для обновления конфигурации с сервера
         } catch (error) {
             alert("Error: " + error.message);
         }
@@ -22,31 +44,23 @@ function ConfigEditor({ config, currentAddress }) {
 
     return (
         <div className="config-editor">
-            <h2>Configuration</h2>
+            <h2>Current IP: {currentAddress}</h2>
             <TransitionGroup>
-                {Object.keys(config).map(section => (
-                    <CSSTransition
-                        key={section}
-                        timeout={300}
-                        classNames="fade"
-                    >
+                {Object.keys(localConfig).map(section => (
+                    <CSSTransition key={section} timeout={300} classNames="fade">
                         <div className="config-section">
                             <h3>{section}</h3>
                             <table>
                                 <tbody>
-                                    {Object.entries(config[section]).map(([key, value]) => (
-                                        <CSSTransition
-                                            key={key}
-                                            timeout={300}
-                                            classNames="fade"
-                                        >
+                                    {Object.entries(localConfig[section]).map(([key, value]) => (
+                                        <CSSTransition key={key} timeout={300} classNames="fade">
                                             <tr>
                                                 <td>{key}</td>
                                                 <td>
                                                     <input
                                                         type="text"
-                                                        defaultValue={value}
-                                                        onBlur={(e) => handleChange(section, key, e.target.value)}
+                                                        value={value}
+                                                        onChange={(e) => handleChange(section, key, e.target.value)}
                                                     />
                                                 </td>
                                             </tr>
@@ -58,6 +72,7 @@ function ConfigEditor({ config, currentAddress }) {
                     </CSSTransition>
                 ))}
             </TransitionGroup>
+            <button onClick={handleSave}>Save Config</button>
         </div>
     );
 }

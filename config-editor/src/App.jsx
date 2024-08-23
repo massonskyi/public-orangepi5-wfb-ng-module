@@ -2,7 +2,9 @@ import React, { useState, useEffect } from 'react';
 import AddressInput from './components/AddressInput';
 import RecentAddresses from './components/RecentAddresses';
 import ConfigEditor from './components/ConfigEditor';
-import "./styles/App.css"
+import BurgerMenu from './components/BurgerMenu';
+import SSHTerminal from './components/SSHTerminal'; // Import the SSH terminal
+import './styles/App.css'; // Ensure the path is correct
 
 function App() {
     const [currentAddress, setCurrentAddress] = useState('');
@@ -39,11 +41,13 @@ function App() {
     };
 
     return (
-        <div className="container mx-auto p-8">
-            <h1 className="text-4xl font-bold text-center mb-8 text-blue-600">Config Editor</h1>
+        <div className="container">
+            <BurgerMenu />
+            <h1>Config Editor</h1>
             <AddressInput saveAddress={saveAddress} />
             <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} />
             {config && <ConfigEditor config={config} currentAddress={currentAddress} />}
+            <SSHTerminal currentAddress={currentAddress} /> {/* Pass the currentAddress prop */}
         </div>
     );
 }

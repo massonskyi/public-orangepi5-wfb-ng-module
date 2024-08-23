@@ -1,0 +1,81 @@
+/* Container for the burger menu */
+.burger-menu-container {
+    position: relative;
+}
+
+/* Button styles */
+.burger-button {
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: white;
+    padding: 10px;
+    position: fixed;
+    z-index: 1001; /* Ensure button stays above the content */
+    top: 20px;
+    left: 20px;
+    background-color: #1a73e8;
+    border-radius: 15%;
+    border: 1px solid white;
+}
+
+/* Full-screen menu styles */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #945cee;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Menu list */
+.menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu ul li {
+    margin: 20px 0;
+}
+
+.menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s;
+}
+
+.menu ul li a:hover {
+    color: #ffeb3b;
+}
+
+/* Animations for the menu */
+.menu-transition-enter {
+    opacity: 0;
+}
+
+.menu-transition-enter-active {
+    opacity: 1;
+    transition: opacity 300ms;
+}
+
+.menu-transition-exit {
+    opacity: 1;
+}
+
+.menu-transition-exit-active {
+    opacity: 0;
+    transition: opacity 300ms;
+}

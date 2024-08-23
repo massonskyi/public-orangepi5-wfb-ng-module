@@ -79,30 +79,30 @@ if ! cd ..; then
     exit 1
 fi
 
-# Создание config файла
-echo "Создание конфигурационного файла"
+# # Создание config файла
+# echo "Создание конфигурационного файла"
 
-if ! cd /scripts/subs; then
-    log_error "Неизвестная ошибка, проверьте целостность файлов"
-    exit 1
-fi
+# if ! cd /scripts/subs; then
+#     log_error "Неизвестная ошибка, проверьте целостность файлов"
+#     exit 1
+# fi
 
-for script in *.sh; do
-    # Проверка, существует ли файл
-    if [ -f "$script" ]; then
-        # Делаем файл исполняемым
-        chmod +x "$script"
-        echo "Сделал $script исполняемым."
+# for script in *.sh; do
+#     # Проверка, существует ли файл
+#     if [ -f "$script" ]; then
+#         # Делаем файл исполняемым
+#         chmod +x "$script"
+#         echo "Сделал $script исполняемым."
 
-        # Выполняем файл
-        ./"$script"
-        echo "Выполнил $script."
-    else
-        echo "Файл $script не найден."
-    fi
-done
+#         # Выполняем файл
+#         ./"$script"
+#         echo "Выполнил $script."
+#     else
+#         echo "Файл $script не найден."
+#     fi
+# done
 
-echo "Все скрипты обработаны."
+# echo "Все скрипты обработаны."
 
 # # Переход в директорию driver
 # echo "Переход в директорию driver..."
