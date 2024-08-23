@@ -22,7 +22,9 @@ async def save_favorites_endpoint(favorites_request: FavoritesRequest):
 async def reboot_system_endpoint():
     import subprocess
     try:
-        subprocess.run(['sudo', 'reboot'], check=True)
+        command = f'echo orangepi | sudo -S reboot'
+        subprocess.run(command, shell=True, check=True)
+        return {"message": "System reboot initiated."}
     except subprocess.CalledProcessError as e:
         return {f"Error: {e}"}
     

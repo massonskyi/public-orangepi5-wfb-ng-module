@@ -8,10 +8,10 @@ function TopPanel({currentAddress}) {
             if (response.ok) {
                 alert(response.data)
             } else {
-                console.error('Failed to load favorites.');
+                console.error('Failed to reboot');
             }
         } catch (error) {
-            console.error('Error loading favorites:', error);
+            console.error('Failed to reboot:', error);
         }
     };
     return (
