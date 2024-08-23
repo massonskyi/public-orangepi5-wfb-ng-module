@@ -1,0 +1,533 @@
+Wi-Fi адаптер не найден
+Wi-Fi адаптер не найден
+Wi-Fi адаптер не найден
+Wi-Fi адаптер не найден
+Wi-Fi адаптер не найден
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+Killing these processes:
+
+    PID Name
+    909 wpa_supplicant
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(monitor mode enabled)
+
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+896724	PKT	0:0:0:0:0:0:0:0:0
+897725	PKT	0:0:0:0:0:0:0:0:0
+898726	PKT	0:0:0:0:0:0:0:0:0
+899728	PKT	0:0:0:0:0:0:0:0:0
+900729	PKT	0:0:0:0:0:0:0:0:0
+901730	PKT	0:0:0:0:0:0:0:0:0
+902731	PKT	0:0:0:0:0:0:0:0:0
+903732	PKT	0:0:0:0:0:0:0:0:0
+904733	PKT	0:0:0:0:0:0:0:0:0
+905734	PKT	0:0:0:0:0:0:0:0:0
+906735	PKT	0:0:0:0:0:0:0:0:0
+907736	PKT	0:0:0:0:0:0:0:0:0
+908737	PKT	0:0:0:0:0:0:0:0:0
+909738	PKT	0:0:0:0:0:0:0:0:0
+910739	PKT	0:0:0:0:0:0:0:0:0
+911740	PKT	0:0:0:0:0:0:0:0:0
+912741	PKT	0:0:0:0:0:0:0:0:0
+913742	PKT	0:0:0:0:0:0:0:0:0
+914743	PKT	0:0:0:0:0:0:0:0:0
+915744	PKT	0:0:0:0:0:0:0:0:0
+916746	PKT	0:0:0:0:0:0:0:0:0
+917747	PKT	0:0:0:0:0:0:0:0:0
+918748	PKT	0:0:0:0:0:0:0:0:0
+919749	PKT	0:0:0:0:0:0:0:0:0
+920750	PKT	0:0:0:0:0:0:0:0:0
+921752	PKT	0:0:0:0:0:0:0:0:0
+922753	PKT	0:0:0:0:0:0:0:0:0
+923754	PKT	0:0:0:0:0:0:0:0:0
+924755	PKT	0:0:0:0:0:0:0:0:0
+925757	PKT	0:0:0:0:0:0:0:0:0
+926758	PKT	0:0:0:0:0:0:0:0:0
+927759	PKT	0:0:0:0:0:0:0:0:0
+928760	PKT	0:0:0:0:0:0:0:0:0
+929761	PKT	0:0:0:0:0:0:0:0:0
+930763	PKT	0:0:0:0:0:0:0:0:0
+931764	PKT	0:0:0:0:0:0:0:0:0
+932765	PKT	0:0:0:0:0:0:0:0:0
+933766	PKT	0:0:0:0:0:0:0:0:0
+934768	PKT	0:0:0:0:0:0:0:0:0
+935768	PKT	0:0:0:0:0:0:0:0:0
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+Killing these processes:
+
+    PID Name
+    886 wpa_supplicant
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(monitor mode enabled)
+
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+Killing these processes:
+
+    PID Name
+    878 wpa_supplicant
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(monitor mode enabled)
+
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+/home/orangepi/repo/wfb-ng-module/scripts/run-service-received.sh: line 52: cd: ../build/: No such file or directory
+Не удалось перейти в директорию ../build/
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+Killing these processes:
+
+    PID Name
+    889 wpa_supplicant
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(monitor mode enabled)
+
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Не удалось запустить VideoRx для адаптера wlx00c0cab49355
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Не удалось запустить VideoRx для адаптера wlx00c0cab49355
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Не удалось запустить VideoRx для адаптера wlx00c0cab49355
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Не удалось запустить VideoRx для адаптера wlx00c0cab49355
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(mac80211 monitor mode already enabled for [phy0]wlx00c0cab49355 on [phy0]wlx00c0cab49355)
+sudo: a terminal is required to read the password; either use the -S option to read from standard input or configure an askpass helper
+sudo: a password is required
+Не удалось запустить VideoRx для адаптера wlx00c0cab49355
+Найден Wi-Fi адаптер: wlx00c0cab49355
+
+Killing these processes:
+
+    PID Name
+    925 wpa_supplicant
+
+
+
+PHY	Interface	Driver		Chipset
+
+phy0	wlx00c0cab49355	88XXau		Realtek Semiconductor Corp. RTL8812AU 802.11a/b/g/n/ac 2T2R DB WLAN Adapter
+		(monitor mode enabled)
+
+12094	PKT	0:0:0:0:0:0:0:0:0
+13095	PKT	0:0:0:0:0:0:0:0:0
+14096	PKT	0:0:0:0:0:0:0:0:0
+15096	PKT	0:0:0:0:0:0:0:0:0
+16097	PKT	0:0:0:0:0:0:0:0:0
+17098	PKT	0:0:0:0:0:0:0:0:0
+18099	PKT	0:0:0:0:0:0:0:0:0
+19101	PKT	0:0:0:0:0:0:0:0:0
+20102	PKT	0:0:0:0:0:0:0:0:0
+21103	PKT	0:0:0:0:0:0:0:0:0
+22103	PKT	0:0:0:0:0:0:0:0:0
+23104	PKT	0:0:0:0:0:0:0:0:0
+24106	PKT	0:0:0:0:0:0:0:0:0
+25107	PKT	0:0:0:0:0:0:0:0:0
+26108	PKT	0:0:0:0:0:0:0:0:0
+27109	PKT	0:0:0:0:0:0:0:0:0
+28110	PKT	0:0:0:0:0:0:0:0:0
+29111	PKT	0:0:0:0:0:0:0:0:0
+30112	PKT	0:0:0:0:0:0:0:0:0
+31113	PKT	0:0:0:0:0:0:0:0:0
+32115	PKT	0:0:0:0:0:0:0:0:0
+33116	PKT	0:0:0:0:0:0:0:0:0
+34117	PKT	0:0:0:0:0:0:0:0:0
+35118	PKT	0:0:0:0:0:0:0:0:0
+36119	PKT	0:0:0:0:0:0:0:0:0
+37120	PKT	0:0:0:0:0:0:0:0:0
+38122	PKT	0:0:0:0:0:0:0:0:0
+39123	PKT	0:0:0:0:0:0:0:0:0
+40124	PKT	0:0:0:0:0:0:0:0:0
+41125	PKT	0:0:0:0:0:0:0:0:0
+42126	PKT	0:0:0:0:0:0:0:0:0
+43127	PKT	0:0:0:0:0:0:0:0:0
+44128	PKT	0:0:0:0:0:0:0:0:0
+45129	PKT	0:0:0:0:0:0:0:0:0
+46130	PKT	0:0:0:0:0:0:0:0:0
+47131	PKT	0:0:0:0:0:0:0:0:0
+48132	PKT	0:0:0:0:0:0:0:0:0
+49133	PKT	0:0:0:0:0:0:0:0:0
+50134	PKT	0:0:0:0:0:0:0:0:0
+51135	PKT	0:0:0:0:0:0:0:0:0
+52136	PKT	0:0:0:0:0:0:0:0:0
+53137	PKT	0:0:0:0:0:0:0:0:0
+54138	PKT	0:0:0:0:0:0:0:0:0
+55139	PKT	0:0:0:0:0:0:0:0:0
+56140	PKT	0:0:0:0:0:0:0:0:0
+57141	PKT	0:0:0:0:0:0:0:0:0
+58143	PKT	0:0:0:0:0:0:0:0:0
+59144	PKT	0:0:0:0:0:0:0:0:0
+60145	PKT	0:0:0:0:0:0:0:0:0
+61146	PKT	0:0:0:0:0:0:0:0:0
+62146	PKT	0:0:0:0:0:0:0:0:0
+63148	PKT	0:0:0:0:0:0:0:0:0
+64149	PKT	0:0:0:0:0:0:0:0:0
+65150	PKT	0:0:0:0:0:0:0:0:0
+66151	PKT	0:0:0:0:0:0:0:0:0
+67152	PKT	0:0:0:0:0:0:0:0:0
+68154	PKT	0:0:0:0:0:0:0:0:0
+69155	PKT	0:0:0:0:0:0:0:0:0
+70156	PKT	0:0:0:0:0:0:0:0:0
+71157	PKT	0:0:0:0:0:0:0:0:0
+72158	PKT	0:0:0:0:0:0:0:0:0
+73160	PKT	0:0:0:0:0:0:0:0:0
+74161	PKT	0:0:0:0:0:0:0:0:0
+75162	PKT	0:0:0:0:0:0:0:0:0
+76163	PKT	0:0:0:0:0:0:0:0:0
+77165	PKT	0:0:0:0:0:0:0:0:0
+78166	PKT	0:0:0:0:0:0:0:0:0
+79167	PKT	0:0:0:0:0:0:0:0:0
+80168	PKT	0:0:0:0:0:0:0:0:0
+81169	PKT	0:0:0:0:0:0:0:0:0
+82171	PKT	0:0:0:0:0:0:0:0:0
+83172	PKT	0:0:0:0:0:0:0:0:0
+84173	PKT	0:0:0:0:0:0:0:0:0
+85174	PKT	0:0:0:0:0:0:0:0:0
+86175	PKT	0:0:0:0:0:0:0:0:0
+87177	PKT	0:0:0:0:0:0:0:0:0
+88178	PKT	0:0:0:0:0:0:0:0:0
+89179	PKT	0:0:0:0:0:0:0:0:0
+90180	PKT	0:0:0:0:0:0:0:0:0
+91181	PKT	0:0:0:0:0:0:0:0:0
+92182	PKT	0:0:0:0:0:0:0:0:0
+93183	PKT	0:0:0:0:0:0:0:0:0
+94184	PKT	0:0:0:0:0:0:0:0:0
+95185	PKT	0:0:0:0:0:0:0:0:0
+96187	PKT	0:0:0:0:0:0:0:0:0
+97188	PKT	0:0:0:0:0:0:0:0:0
+98189	PKT	0:0:0:0:0:0:0:0:0
+99190	PKT	0:0:0:0:0:0:0:0:0
+100191	PKT	0:0:0:0:0:0:0:0:0
+101192	PKT	0:0:0:0:0:0:0:0:0
+102193	PKT	0:0:0:0:0:0:0:0:0
+103194	PKT	0:0:0:0:0:0:0:0:0
+104195	PKT	0:0:0:0:0:0:0:0:0
+105197	PKT	0:0:0:0:0:0:0:0:0
+106198	PKT	0:0:0:0:0:0:0:0:0
+107199	PKT	0:0:0:0:0:0:0:0:0
+108200	PKT	0:0:0:0:0:0:0:0:0
+109201	PKT	0:0:0:0:0:0:0:0:0
+110202	PKT	0:0:0:0:0:0:0:0:0
+111203	PKT	0:0:0:0:0:0:0:0:0
+112204	PKT	0:0:0:0:0:0:0:0:0
+113205	PKT	0:0:0:0:0:0:0:0:0
+114206	PKT	0:0:0:0:0:0:0:0:0
+115207	PKT	0:0:0:0:0:0:0:0:0
+116208	PKT	0:0:0:0:0:0:0:0:0
+117209	PKT	0:0:0:0:0:0:0:0:0
+118210	PKT	0:0:0:0:0:0:0:0:0
+119211	PKT	0:0:0:0:0:0:0:0:0
+120213	PKT	0:0:0:0:0:0:0:0:0
+121214	PKT	0:0:0:0:0:0:0:0:0
+122215	PKT	0:0:0:0:0:0:0:0:0
+123216	PKT	0:0:0:0:0:0:0:0:0
+124217	PKT	0:0:0:0:0:0:0:0:0
+125219	PKT	0:0:0:0:0:0:0:0:0
+126220	PKT	0:0:0:0:0:0:0:0:0
+127221	PKT	0:0:0:0:0:0:0:0:0
+128222	PKT	0:0:0:0:0:0:0:0:0
+129223	PKT	0:0:0:0:0:0:0:0:0
+130223	PKT	0:0:0:0:0:0:0:0:0
+131224	PKT	0:0:0:0:0:0:0:0:0
+132225	PKT	0:0:0:0:0:0:0:0:0
+133227	PKT	0:0:0:0:0:0:0:0:0
+134228	PKT	0:0:0:0:0:0:0:0:0
+135229	PKT	0:0:0:0:0:0:0:0:0
+136230	PKT	0:0:0:0:0:0:0:0:0
+137231	PKT	0:0:0:0:0:0:0:0:0
+138233	PKT	0:0:0:0:0:0:0:0:0
+139233	PKT	0:0:0:0:0:0:0:0:0
+140234	PKT	0:0:0:0:0:0:0:0:0
+141235	PKT	0:0:0:0:0:0:0:0:0
+142236	PKT	0:0:0:0:0:0:0:0:0
+143238	PKT	0:0:0:0:0:0:0:0:0
+144239	PKT	0:0:0:0:0:0:0:0:0
+145240	PKT	0:0:0:0:0:0:0:0:0
+146241	PKT	0:0:0:0:0:0:0:0:0
+147243	PKT	0:0:0:0:0:0:0:0:0
+148244	PKT	0:0:0:0:0:0:0:0:0
+149245	PKT	0:0:0:0:0:0:0:0:0
+150246	PKT	0:0:0:0:0:0:0:0:0
+151248	PKT	0:0:0:0:0:0:0:0:0
+152249	PKT	0:0:0:0:0:0:0:0:0
+153250	PKT	0:0:0:0:0:0:0:0:0
+154251	PKT	0:0:0:0:0:0:0:0:0
+155253	PKT	0:0:0:0:0:0:0:0:0
+156254	PKT	0:0:0:0:0:0:0:0:0
+157255	PKT	0:0:0:0:0:0:0:0:0
+158256	PKT	0:0:0:0:0:0:0:0:0
+159258	PKT	0:0:0:0:0:0:0:0:0
+160259	PKT	0:0:0:0:0:0:0:0:0
+161260	PKT	0:0:0:0:0:0:0:0:0
+162261	PKT	0:0:0:0:0:0:0:0:0
+163263	PKT	0:0:0:0:0:0:0:0:0
+164264	PKT	0:0:0:0:0:0:0:0:0
+165265	PKT	0:0:0:0:0:0:0:0:0
+166266	PKT	0:0:0:0:0:0:0:0:0
+167267	PKT	0:0:0:0:0:0:0:0:0
+168268	PKT	0:0:0:0:0:0:0:0:0
+169269	PKT	0:0:0:0:0:0:0:0:0
+170270	PKT	0:0:0:0:0:0:0:0:0
+171271	PKT	0:0:0:0:0:0:0:0:0
+172272	PKT	0:0:0:0:0:0:0:0:0
+173273	PKT	0:0:0:0:0:0:0:0:0
+174275	PKT	0:0:0:0:0:0:0:0:0
+175276	PKT	0:0:0:0:0:0:0:0:0
+176277	PKT	0:0:0:0:0:0:0:0:0
+177278	PKT	0:0:0:0:0:0:0:0:0
+178280	PKT	0:0:0:0:0:0:0:0:0
+179281	PKT	0:0:0:0:0:0:0:0:0
+180282	PKT	0:0:0:0:0:0:0:0:0
+181283	PKT	0:0:0:0:0:0:0:0:0
+182284	PKT	0:0:0:0:0:0:0:0:0
+183286	PKT	0:0:0:0:0:0:0:0:0
+184287	PKT	0:0:0:0:0:0:0:0:0
+185288	PKT	0:0:0:0:0:0:0:0:0
+186289	PKT	0:0:0:0:0:0:0:0:0
+187291	PKT	0:0:0:0:0:0:0:0:0
+188292	PKT	0:0:0:0:0:0:0:0:0
+189293	PKT	0:0:0:0:0:0:0:0:0
+190294	PKT	0:0:0:0:0:0:0:0:0
+191295	PKT	0:0:0:0:0:0:0:0:0
+192296	PKT	0:0:0:0:0:0:0:0:0
+193297	PKT	0:0:0:0:0:0:0:0:0
+194298	PKT	0:0:0:0:0:0:0:0:0
+195299	PKT	0:0:0:0:0:0:0:0:0
+196300	PKT	0:0:0:0:0:0:0:0:0
+197301	PKT	0:0:0:0:0:0:0:0:0
+198302	PKT	0:0:0:0:0:0:0:0:0
+199303	PKT	0:0:0:0:0:0:0:0:0
+200305	PKT	0:0:0:0:0:0:0:0:0
+201306	PKT	0:0:0:0:0:0:0:0:0
+202307	PKT	0:0:0:0:0:0:0:0:0
+203308	PKT	0:0:0:0:0:0:0:0:0
+204309	PKT	0:0:0:0:0:0:0:0:0
+205310	PKT	0:0:0:0:0:0:0:0:0
+206311	PKT	0:0:0:0:0:0:0:0:0
+207312	PKT	0:0:0:0:0:0:0:0:0
+208313	PKT	0:0:0:0:0:0:0:0:0
+209314	PKT	0:0:0:0:0:0:0:0:0
+210315	PKT	0:0:0:0:0:0:0:0:0
+211316	PKT	0:0:0:0:0:0:0:0:0
+212318	PKT	0:0:0:0:0:0:0:0:0
+213319	PKT	0:0:0:0:0:0:0:0:0
+214320	PKT	0:0:0:0:0:0:0:0:0
+215321	PKT	0:0:0:0:0:0:0:0:0
+216322	PKT	0:0:0:0:0:0:0:0:0
+217323	PKT	0:0:0:0:0:0:0:0:0
+218324	PKT	0:0:0:0:0:0:0:0:0
+219325	PKT	0:0:0:0:0:0:0:0:0
+220326	PKT	0:0:0:0:0:0:0:0:0
+221327	PKT	0:0:0:0:0:0:0:0:0
+222329	PKT	0:0:0:0:0:0:0:0:0
+223330	PKT	0:0:0:0:0:0:0:0:0
+224331	PKT	0:0:0:0:0:0:0:0:0
+225332	PKT	0:0:0:0:0:0:0:0:0
+226333	PKT	0:0:0:0:0:0:0:0:0
+227335	PKT	0:0:0:0:0:0:0:0:0
+228336	PKT	0:0:0:0:0:0:0:0:0
+229337	PKT	0:0:0:0:0:0:0:0:0
+230338	PKT	0:0:0:0:0:0:0:0:0
+231339	PKT	0:0:0:0:0:0:0:0:0
