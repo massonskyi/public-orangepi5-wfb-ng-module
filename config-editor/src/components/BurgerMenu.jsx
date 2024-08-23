@@ -8,7 +8,19 @@ function BurgerMenu() {
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen); // Toggle between open and close
     };
-
+    const rebootSystem = async () => {
+        try {
+            const response = await fetch(`http://${currentAddress}/api/sys/api/reboot_system`);
+            if (response.ok) {
+                const data = await response.json();
+                setFavorites(data);
+            } else {
+                console.error('Failed to load favorites.');
+            }
+        } catch (error) {
+            console.error('Error loading favorites:', error);
+        }
+    };
     return (
         <div className="burger-menu-container">
             <CSSTransition
