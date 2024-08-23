@@ -3,16 +3,16 @@ import '../styles/TopPanel.css'; // Ensure the path is correct
 
 function TopPanel({currentAddress}) {
     const rebootSystem = async () => {
-        try {
-            const response = await fetch(`http://${currentAddress}/api/sys/api/reboot_system`);
-            if (response.ok) {
-                alert(response.data)
-            } else {
-                console.error('Failed to reboot');
-            }
-        } catch (error) {
-            console.error('Failed to reboot:', error);
-        }
+        const response = await fetch(`http://${currentAddress}/api/sys/api/reboot_system`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (!response.ok) throw new Error('Failed to reboot:', error);
+        alert(response.json())
+
     };
     return (
         <div className="top-panel">
