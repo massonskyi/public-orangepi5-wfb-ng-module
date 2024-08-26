@@ -2,17 +2,18 @@ import React, { useState, useEffect } from 'react';
 import '../styles/RecentAddresses.css'; // Подключаем файл стилей
 
 function RecentAddresses({ recentAddresses, saveAddress, currentAddress }) {
-    const [favorites, setFavorites] = useState([]);
+    const defaultFavorites = ['10.78.1.125', '10.78.1.101'];
+    const [favorites, setFavorites] = useState(defaultFavorites);
 
     // Fetch favorites from the backend on mount
     useEffect(() => {
         const loadFavorites = async () => {
             try {
-                const response = await fetch(`http://${currentAddress}/api/favorites`);
+                const response = await fetch(`http://${currentAddress}/api/sys/api/favorites`);
                 if (response.ok) {
                     const data = await response.json();
                     setFavorites(data);
-                } else {
+                } else {льо 
                     console.error('Failed to load favorites.');
                 }
             } catch (error) {
@@ -27,7 +28,7 @@ function RecentAddresses({ recentAddresses, saveAddress, currentAddress }) {
     useEffect(() => {
         const saveFavorites = async () => {
             try {
-                const response = await fetch(`http://${currentAddress}/api/favorites`, {
+                const response = await fetch(`http://${currentAddress}/api/sys/api/favorites`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

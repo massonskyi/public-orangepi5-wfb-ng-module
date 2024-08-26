@@ -112,16 +112,18 @@ if [ $param_s -eq 1 ]; then
   cp /subs/* /usr/local/bin/sender
 
 fi
-  cd "$current_dir/../"
-  mkdir -p /usr/local/bin/servers
-  cp configurator /usr/local/bin/servers
-  cp config-editor /usr/local/bin/servers
-  cd /usr/local/bin/servers/configurator
-  apt-get install python3-venv
-  python3 -m venv .venv
-  source .venv/bin/activate
-  pip install -r requirements.txt
-  deactivate
-  cd ../config-editor
-  npm install
+cd "$current_dir/../"
+mkdir -p /usr/local/bin/servers
+cp configurator /usr/local/bin/servers
+cp config-editor /usr/local/bin/servers
+cd /usr/local/bin/servers/configurator
+apt-get install python3-venv
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+deactivate
+cd ../config-editor
+npm install
+npm install -g serve
+
 echo "Встройка в систему завершена"

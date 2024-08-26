@@ -112,6 +112,16 @@ function ConfigEditor({ config, currentAddress, removeAddress }) {
         setNewName('');
     };
 
+    const handleRemoveKey = (section, key) => {
+        setLocalConfig(prevConfig => {
+            const { [key]: _, ...rest } = prevConfig[section];
+            return {
+                ...prevConfig,
+                [section]: rest,
+            };
+        });
+    };
+
     const getEditorClass = () => {
         if (config === null) return 'config-editor--default';
         return currentAddress === config ? 'config-editor--active' : 'config-editor--inactive';
@@ -156,7 +166,7 @@ function ConfigEditor({ config, currentAddress, removeAddress }) {
                             <table className="config-section__table">
                                 <tbody>
                                     {Object.entries(localConfig[section] || {}).map(([key, value]) => (
-                                        <CSSTransition key={key} timeout={300} classNames="fade">
+                                        <CSSTransition key={key} timeout={300} classNames="shatter">
                                             <tr className="config-section__row">
                                                 <td
                                                     className={`config-section__key ${currentAddress === config ? 'config-section__key--active' : 'config-section__key--default'}`}
@@ -182,11 +192,19 @@ function ConfigEditor({ config, currentAddress, removeAddress }) {
                                                         className="config-section__input"
                                                     />
                                                 </td>
+                                                <td className="config-section__remove-key">
+                                                    <button
+                                                        className="config-section__remove-key-button"
+                                                        onClick={() => handleRemoveKey(section, key)}
+                                                    >
+                                                        &times;
+                                                    </button>
+                                                </td>
                                             </tr>
                                         </CSSTransition>
                                     ))}
                                     <tr>
-                                        <td colSpan="2">
+                                        <td colSpan="3">
                                             <button onClick={() => handleAddKey(section)} className="config-section__add-key">
                                                 + Add Key
                                             </button>

@@ -16,8 +16,9 @@ else:
     print("Конфигурационный файл не существует. Запустите ~/scripts/installer.sh для его создания.")
 
 
-# Define the path to the JSON file
-FAVORITES_FILE = "favorites.json"
+import os
+import platform
+import json
 
-# Укажите путь к лог-файлам
-LOG_FILE_PATH = "/home/massonskyi/repo/public-orangepi5-wfb-ng-module/orangepi5-wfb-ng-module/log/"
+def get_config_path():
+    return "../data/favorites.json"

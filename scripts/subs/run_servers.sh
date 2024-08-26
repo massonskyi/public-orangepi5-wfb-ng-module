@@ -17,7 +17,8 @@ deactivate
 # Start npm in the background and log output
 echo "Starting npm server..."
 cd "$current_dir/../../config-editor/"
-npm start > "$NPM_LOG" 2>&1 &
+npm run build
+serve -s build > "$NPM_LOG" 2>&1 &
 
 NPM_PID=$!
 echo "npm server started with PID $NPM_PID. Logs are in $NPM_LOG"

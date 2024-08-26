@@ -1,283 +1,335 @@
 /* ConfigEditor.css */
 .config-editor {
-    background-color: #f9f9f9;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    margin: 10px;
-    min-width: 300px;
-    max-width: 600px;
-    overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 10px;
+  min-width: 300px;
+  max-width: 600px;
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .config-editor__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .config-editor__title {
-    font-size: 1.75rem;
-    font-weight: 600;
-    color: #333;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: #333;
 }
 
 .config-editor__remove {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    color: #e57373;
-    cursor: pointer;
-    transition: color 0.3s;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #e57373;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s;
 }
 
 .config-editor__remove:hover {
-    color: #c62828;
+  color: #c62828;
+  transform: scale(1.2);
 }
 
 .config-editor__sections {
-    display: flex;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
 }
 
 .config-section {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 15px;
-    margin-right: 15px;
-    min-width: 250px;
-    flex: 0 0 auto;
-    transition: transform 0.3s, box-shadow 0.3s;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  margin-right: 15px;
+  min-width: 250px;
+  flex: 0 0 auto;
+  transition: transform 0.3s, box-shadow 0.3s, opacity 0.3s;
 }
+
 .config-section:hover {
-    transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
 }
+
 .config-section__title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: #1a73e8;
-    margin-bottom: 1rem;
-    text-align: center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #1a73e8;
+  margin-bottom: 1rem;
+  text-align: center;
 }
 
 .config-section__table {
-    width: 100%;
-    border-collapse: collapse;
+  width: 100%;
+  border-collapse: collapse;
 }
 
 .config-section__row {
-    border-bottom: 1px solid #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  transition: opacity 0.3s, transform 0.3s;
 }
 
 .config-section__key, .config-editor__add-section {
-    font-weight: 500;
-    padding: 10px;
-    background-color: #f1f1f1;
+  font-weight: 500;
+  padding: 10px;
+  background-color: #f1f1f1;
 }
 
 .config-section__value {
-    padding: 10px;
+  padding: 10px;
 }
 
 .config-section__input {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .config-section__input:focus {
-    border-color: #1a73e8;
-    box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
-    outline: none;
+  border-color: #1a73e8;
+  box-shadow: 0 0 5px rgba(26, 115, 232, 0.3);
+  outline: none;
 }
 
 .config-editor__button {
-    width: 100%;
-    padding: 12px;
-    background-color: #1a73e8;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+  background-color: #1a73e8;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  margin-top: 20px;
 }
 
 .config-editor__button:hover {
-    background-color: #135ba1;
-    transform: translateY(-2px);
+  background-color: #135ba1;
+  transform: translateY(-2px);
 }
 
 .config-editor__button:active {
-    background-color: #0c3c8c;
-    transform: translateY(0);
+  background-color: #0c3c8c;
+  transform: translateY(0);
 }
 
 .fade-enter {
-    opacity: 0;
-    transform: translateY(-20px);
+  opacity: 0;
+  transform: translateY(-20px);
 }
 
 .fade-enter-active {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 300ms ease-in, transform 300ms ease-in;
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 300ms ease-in, transform 300ms ease-in;
 }
 
 .fade-exit {
-    opacity: 1;
-    transform: translateY(0);
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .fade-exit-active {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 300ms ease-out, transform 300ms ease-out;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 300ms ease-out, transform 300ms ease-out;
 }
 
 .config-editors {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.config-editor {
+  flex: 1;
+  min-width: 300px;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.config-editor__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.config-editor__header h2 {
+  margin: 0;
+}
+
+.config-section__remove-key-button {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 10px;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.config-section__remove-key-button:hover {
+  background-color: #ff1a1a;
+  transform: scale(1.1);
+}
+
+.config-editor__header button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.config-editor__header button:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+.config-section {
+  margin-bottom: 20px;
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.config-section__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.config-section__header h3 {
+  margin: 0;
+}
+
+.config-section__header button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.config-section__header button:hover {
+  background-color: #c82333;
+  transform: scale(1.1);
+}
+
+.config-section__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.config-section__table th,
+.config-section__table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.config-section__table th {
+  background-color: #f8f9fa;
+}
+
+.config-section__input {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.config-section__add-key {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.config-section__add-key:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+.config-editor__add-section {
+  margin-top: 20px;
+}
+
+.config-editor__add-section-button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.config-editor__add-section-button:hover {
+  background-color: #0056b3;
+  transform: scale(1.1);
+}
+
+.config-editor__button,.config-editor__add-section {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.config-editor__button:hover {
+  background-color: #218838;
+  transform: scale(1.1);
+}
+
+/* Keyframes for shattering animation */
+@keyframes shatter {
+  0% {
+      transform: scale(1);
+      opacity: 1;
   }
-  
-  .config-editor {
-    flex: 1;
-    min-width: 300px;
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: #fff;
+  100% {
+      transform: scale(0) rotate(360deg);
+      opacity: 0;
   }
-  
-  .config-editor__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-  }
-  
-  .config-editor__header h2 {
-    margin: 0;
-  }
-  
-  .config-editor__header button {
-    margin-left: 10px;
-    padding: 5px 10px;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .config-editor__header button:hover {
-    background-color: #c82333;
-    color: white;
-  }
-  
-  .config-section {
-    margin-bottom: 20px;
-  }
-  
-  .config-section__header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .config-section__header h3 {
-    margin: 0;
-  }
-  
-  .config-section__header button {
-    padding: 5px 10px;
-    background-color: #dc3545;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .config-section__header button:hover {
-    background-color: #c82333;
-    color: white;
-  }
-  
-  .config-section__table {
-    width: 100%;
-    border-collapse: collapse;
-  }
-  
-  .config-section__table th,
-  .config-section__table td {
-    padding: 10px;
-    border: 1px solid #ddd;
-  }
-  
-  .config-section__table th {
-    background-color: #f8f9fa;
-  }
-  
-  .config-section__input {
-    width: 100%;
-    padding: 5px;
-    border: 1px solid #ddd;
-    border-radius: 3px;
-  }
-  
-  .config-section__add-key {
-    margin-top: 10px;
-    padding: 5px 10px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .config-section__add-key:hover {
-    background-color: #218838;
-  }
-  
-  .config-editor__add-section {
-    margin-top: 20px;
-  }
-  
-  .config-editor__add-section-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .config-editor__add-section-button:hover {
-    background-color: #0056b3;
-  }
-  
-  .config-editor__button,.config-editor__add-section {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .config-editor__button:hover {
-    background-color: #218838;
-  }
-  
+}
+
+/* Apply shattering animation to elements being removed */
+.shatter-exit-active {
+  animation: shatter 0.5s ease-out forwards;
+}

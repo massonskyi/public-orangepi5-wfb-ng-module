@@ -40,6 +40,7 @@ function App() {
         const fetchedConfig = await fetchConfig(address);
         setConfig(fetchedConfig);
     };
+
     const removeAddress = (address) => {
         setRecentAddresses(prev => {
             const updatedAddresses = prev.filter(addr => addr !== address);
@@ -54,11 +55,11 @@ function App() {
 
     return (
         <div className="container">
-            <TopPanel currentAddress={currentAddress}/> {/* Include the TopPanel component */}
+            <TopPanel currentAddress={currentAddress} /> {/* Include the TopPanel component */}
             <BurgerMenu />
             <h1>Config Editor</h1>
             <AddressInput saveAddress={saveAddress} />
-            <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} currentAddress={currentAddress}/>
+            <RecentAddresses recentAddresses={recentAddresses} saveAddress={saveAddress} currentAddress={currentAddress} />
             <div className="config-editors">
                 {recentAddresses.map(address => (
                     <ConfigEditor
@@ -70,7 +71,7 @@ function App() {
                 ))}
             </div>
             <div className="config-logs">
-                <LogsViewer currentAddress={currentAddress}></LogsViewer>
+                <LogsViewer currentAddress={currentAddress} />
             </div>
         </div>
     );

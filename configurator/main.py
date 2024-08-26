@@ -1,4 +1,3 @@
-
 from fastapi import FastAPI
 from routers.api_crud import endpoint as API_CRUD
 from routers.api_system import endpoint as API_SYS
@@ -29,9 +28,27 @@ app.add_middleware(
 app.include_router(
     API_CRUD, prefix="/api"
 )
+
+
 app.include_router(
     API_SYS, prefix="/api"
 )
+
+@app.get("/")
+def get_local_ip():
+    import subprocess
+    try:
+        # Get the list of network interfaces
+        result = subprocess.run(['ip', '-4', 'addr', 'show'], capture_output=True, text=True, check=True)
+        lines = result.stdout.split('\n')
+        # return {'ips': lines}
+        for line in lines:
+            if 'inet ' in line and ('eth' in line or 'enp3s' in line) :
+                ip_address = line.split()[1].split('/')[0]
+                return {"local_ip": ip_address}
+        return {"error": "Ethernet IP address not found"}
+    except subprocess.CalledProcessError as e:
+        return {"error": f"Error: {e}"}
 
 if __name__ == '__main__':
     import os 

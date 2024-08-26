@@ -111,17 +111,23 @@ fi
 
 # echo "Все скрипты обработаны."
 
-# # Переход в директорию driver
-# echo "Переход в директорию driver..."
-# if ! cd "$driver_dir"; then
-#     log_error "Не удалось перейти в директорию driver."
-# fi
+# Переход в директорию driver
+echo "Переход в директорию driver..."
+if ! cd "$driver_dir"; then
+    log_error "Не удалось перейти в директорию driver."
+fi
 
 # Запуск скрипта dkms-install.sh TODO: Реализовать выбор устанавливаемого драйвера
-#echo "Установка драйвера для адаптера"
-#if ! /driver/8812au/./dkms-install.sh; then
-#    log_error "Не удалось запустить скрипт dkms-install.sh."
-#fi
+echo "Установка драйверов для адаптера"
+chmod +x ./8812au/setup-8812au.sh
+if ! ./8812au/setup-8812au.sh; then
+   log_error "Не удалось запустить скрипт setup-8812au.sh"
+fi
+
+chmod +x ./88x2bu/setup-88x2bu-20210702.sh
+if ! ./88x2bu/setup-88x2bu-20210702.sh; then
+   log_error "Не удалось запустить скрипт setup-88x2bu-20210702.sh"
+fi
 
 echo "Установка завершена успешно."
 echo "Далее запустите скрипт 'system-include.sh' для добавление программы в систему"
